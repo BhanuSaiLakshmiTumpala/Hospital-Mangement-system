@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Patient info</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous">
+</head>
+<body>
+
+ <div class="container">
+      
+          <hr>
+          
+          <h2>Update Appointment </h2>
+          
+          <form action ="#"  th:action="@{/saveAppointment}" th:object="${appointment}" 
+                method="POST">
+                <input type="hidden" th:field="*{id}"/>
+             
+              <input type="text" th:field="*{patientName}" 
+              class="form-control mb-5 col-2   margin-bottom: 20px" >
+              
+               <input type="text" th:field="*{patientAge}" 
+              class="form-control mb-4 col-2   margin-bottom: 20px" >
+              
+               <input type="text" th:field="*{email}"  
+              class="form-control mb-4 col-2   margin-bottom: 20px" >
+              
+               <input type="text" th:field="*{Address}" 
+              class="form-control mb-4 col-2   margin-bottom: 20px" >
+              
+               <input type="text" th:field="*{gender}"
+              class="form-control mb-4 col-2   margin-bottom: 20px" >
+              
+               <input type="text" th:field="*{phoneNumber}" 
+                    class="form-control mb-4 col-8  margin-bottom: 20px">
+                    
+                    
+                  <input type="text" th:field="*{symptoms}" 
+                    class="form-control mb-4 col-8  margin-bottom: 20px">  
+              
+             <button id="update" type="submit" class="btn btn-info col-8">Update Patient</button>
+               
+          
+          </form>
+   
+   <hr>
+   <a th:href ="@{/list}">Back to Patients List</a>
+   
+   
+   </div>
+
+
+
+</body>
+</html>
